@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HBD ICHA &#x1F49A;</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="greetings">
+      <span>H</span>
+      <span>A</span>
+      <span>P</span>
+      <span>P</span>
+      <span>Y</span>
+      <span></span>
+      <span>B</span>
+      <span>I</span>
+      <span>R</span>
+      <span>T</span>
+      <span>H</span>
+      <span>D</span>
+      <span>A</span>
+      <span>Y</span>
+    </div>
+
+    <div class="greetings2">
+      <span>I</span>
+      <span>C</span>
+      <span>H</span>
+      <span>A</span>
+    </div>
+
+    <div class="description">
+      <span>Aku mau kasih sesuatu buat kamu!!</span>
+    </div>
+    <div class="stiker" id="sticker">
+      <img
+        src="https://media.tenor.com/0r0WpzB8XIIAAAAj/cute-too.gif"
+        alt="lope-lope"
+      />
+    </div>
+    <div class="heart" id="heartCLick"></div>
+    <div class="button" id="buttonClck">
+      <button
+        data-text="Awesome"
+        class="buttonSlide"
+        style="margin-bottom: 20px"
+      >
+        <span class="actual-text"
+          >&nbsp;Apakah kamu bersedia menjadi pasanganku untuk selamanya
+          ??&nbsp;</span
+        >
+        <span class="hover-text" aria-hidden="true"
+          >&nbsp;Apakah kamu bersedia menjadi pasanganku untuk selamanya
+          ??&nbsp;</span
+        >
+      </button>
+      <br />
+      <button class="buttonMove" id="btn_mau" onclick="alert('iya janji')">
+        mau
+      </button>
+      <button id="btn_gamau" onmouseover="gamau(this)" class="buttonMove">
+        ga mau
+      </button>
+    </div>
+  </body>
+  <script>
+    document
+      .getElementById("heartCLick")
+      .addEventListener("click", function () {
+        var stiker = document.getElementById("sticker");
+        stiker.style.display = "block";
+        var button = document.getElementById("buttonClck");
+        button.style.display = "block";
+      });
+    function gamau(id) {
+      var mau = document.getElementById("btn_mau");
+      var i = Math.floor(Math.random() * 300) + 1;
+      var j = Math.floor(Math.random() * 100) + mau.offsetTop;
+      id.style.left = i + "px";
+      id.style.top = j + "px";
+    }
+  </script>
+</html>
